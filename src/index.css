@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type='text'],
+input[type='password'],
+input[type='email'] {
+    @apply my-1 w-full rounded-2xl border px-3 py-2 outline-none;
+}
+
+button {
+    @apply rounded-2xl bg-gray-300 px-3 py-2 outline-none transition-all duration-300 ease-in-out;
+}
+button.primary {
+    background-color: #f5385d;
+    @apply w-full bg-primary p-2 text-white;
+}
+
+/* Hover on button */
+button:hover {
+    background-color: #e22349;
+}
