@@ -1,7 +1,13 @@
 {
-    "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
     "parser": "babel-eslint",
-    "plugins": ["react", "prettier"],
+    "plugins": [
+        "react",
+        "prettier"
+    ],
     "parserOptions": {
         "ecmaVersion": 2016,
         "sourceType": "module",
@@ -26,16 +32,23 @@
         "prettier/prettier": [
             "error",
             {
-                "printWidth": 800,
+                "printWidth": 1000,
                 "trailingComma": "es5",
                 "semi": false,
                 "singleQuote": true,
-                "no-mixed-spaces-and-tabs": ["error", "smart-tabs"]
+                "no-mixed-spaces-and-tabs": [
+                    "error",
+                    "smart-tabs"
+                ]
             }
         ],
         "no-unused-vars": [
             "error",
-            { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+            {
+                "vars": "all",
+                "args": "after-used",
+                "ignoreRestSiblings": false
+            }
         ]
     }
 }
