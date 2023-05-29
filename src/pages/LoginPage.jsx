@@ -21,14 +21,12 @@ function LoginPage() {
     }
 
     if (redirect) {
-        navigate('/')
+        return <Navigate to={'/'} />
     }
     return (
         <div className="flex min-h-screen flex-col justify-center">
             <div className="mb-64">
-                <h1 className="mb-4 text-center text-3xl font-semibold">
-                    Login
-                </h1>
+                <h1 className="mb-4 text-center text-3xl font-semibold">Login</h1>
                 <form
                     className="mx-auto flex max-w-xl flex-col"
                     onSubmit={handleLoginSubmit}

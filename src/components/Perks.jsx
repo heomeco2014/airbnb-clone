@@ -2,11 +2,22 @@ import React from 'react'
 import { IconDog, IconDoorEnter } from '@tabler/icons-react'
 
 function Perks({ selected, onChange }) {
+    function handleCheckBoxClick(perk) {
+        const { checked, name } = perk.target
+        if (checked) {
+            onChange([...selected, name])
+        } else {
+            onChange(selected.filter((item) => item !== name))
+        }
+    }
     return (
         <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
             <label className="flex flex-1 cursor-pointer items-center gap-2 rounded-2xl border p-4">
                 <input
                     type="checkbox"
+                    defaultChecked={selected.includes('wifi')}
+                    onChange={handleCheckBoxClick}
+                    name="wifi"
                     className=""
                 />
                 <svg
@@ -29,6 +40,9 @@ function Perks({ selected, onChange }) {
             <label className="flex flex-1 cursor-pointer items-center gap-2 rounded-2xl border p-4">
                 <input
                     type="checkbox"
+                    defaultChecked={selected.includes('free_parking')}
+                    onChange={handleCheckBoxClick}
+                    name="free_parking"
                     className=""
                 />
                 <svg
@@ -51,6 +65,9 @@ function Perks({ selected, onChange }) {
             <label className="flex flex-1 cursor-pointer items-center gap-2 rounded-2xl border p-4">
                 <input
                     type="checkbox"
+                    defaultChecked={selected.includes('TV')}
+                    onChange={handleCheckBoxClick}
+                    name="TV"
                     className=""
                 />
                 <svg
@@ -73,6 +90,9 @@ function Perks({ selected, onChange }) {
             <label className="flex flex-1 cursor-pointer items-center gap-2 rounded-2xl border p-4">
                 <input
                     type="checkbox"
+                    defaultChecked={selected.includes('Radio')}
+                    onChange={handleCheckBoxClick}
+                    name="Radio"
                     className=""
                 />
                 <svg
@@ -95,15 +115,21 @@ function Perks({ selected, onChange }) {
             <label className="flex flex-1 cursor-pointer items-center gap-2 rounded-2xl border p-4">
                 <input
                     type="checkbox"
+                    defaultChecked={selected.includes('Pet')}
+                    onChange={handleCheckBoxClick}
+                    name="Pet"
                     className=""
                 />
                 <IconDog />
 
-                <span>Wifi</span>
+                <span>Pet</span>
             </label>
             <label className="flex flex-1 cursor-pointer items-center gap-2 rounded-2xl border p-4">
                 <input
                     type="checkbox"
+                    defaultChecked={selected.includes('Private_entrance')}
+                    onChange={handleCheckBoxClick}
+                    name="Private_entrance"
                     className=""
                 />
                 <IconDoorEnter />
