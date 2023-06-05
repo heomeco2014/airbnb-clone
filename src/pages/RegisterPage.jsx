@@ -21,9 +21,7 @@ function RegisterPage() {
     return (
         <div className="flex min-h-screen flex-col justify-center">
             <div className="mb-64">
-                <h1 className="mb-4 text-center text-3xl font-semibold">
-                    Register
-                </h1>
+                <h1 className="mb-4 text-center text-3xl font-semibold">Register</h1>
                 <form
                     className="mx-auto flex max-w-xl flex-col"
                     onSubmit={registerUser}
@@ -52,10 +50,13 @@ function RegisterPage() {
                         placeholder="retype password"
                         onChange={(ev) => setRetypePassword(ev.target.value)}
                     />
-                    <button className="primary ">Register</button>
+                    <button className="primary btn">Register</button>
                     <div className="text-center ">
                         Already have an account ?
-                        <Link to={'/login'} className="font-semibold underline">
+                        <Link
+                            to={'/login'}
+                            className="font-semibold underline"
+                        >
                             Login
                         </Link>
                     </div>

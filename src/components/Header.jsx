@@ -6,15 +6,16 @@ function Header() {
     const { user } = useContext(UserContext)
     return (
         <header className="flex items-center justify-between">
-            <a href="/" className="flex items-center">
+            <Link
+                to={'/'}
+                className="flex items-center"
+            >
                 <img
                     src="/src/assets/logo.png"
                     className="h-[30px] w-[30px] "
                 />
-                <span className="ml-1 text-xl font-[750] text-[#FF385C]">
-                    airbnb
-                </span>
-            </a>
+                <span className="ml-1 text-xl font-[750] text-[#FF385C]">airbnb</span>
+            </Link>
 
             <div className="border-black-400 flex rounded-full border px-4 py-2 font-semibold leading-6 shadow-md shadow-gray-200">
                 <div className="mx-2">Anywhere</div>
@@ -23,7 +24,7 @@ function Header() {
                 <div className="border-l border-gray-300"></div>
                 <div className="mx-2">Add guest</div>
 
-                <button className="rounded-full bg-primary p-1 text-white">
+                <button className="btn rounded-full bg-primary p-1 text-white">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"

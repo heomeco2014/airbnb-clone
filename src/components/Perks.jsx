@@ -15,7 +15,7 @@ function Perks({ selected, onChange }) {
             <label className="flex flex-1 cursor-pointer items-center gap-2 rounded-2xl border p-4">
                 <input
                     type="checkbox"
-                    defaultChecked={selected.includes('wifi')}
+                    checked={selected.includes('wifi')}
                     onChange={handleCheckBoxClick}
                     name="wifi"
                     className=""
@@ -40,7 +40,7 @@ function Perks({ selected, onChange }) {
             <label className="flex flex-1 cursor-pointer items-center gap-2 rounded-2xl border p-4">
                 <input
                     type="checkbox"
-                    defaultChecked={selected.includes('free_parking')}
+                    checked={selected.includes('free_parking')}
                     onChange={handleCheckBoxClick}
                     name="free_parking"
                     className=""
@@ -65,7 +65,7 @@ function Perks({ selected, onChange }) {
             <label className="flex flex-1 cursor-pointer items-center gap-2 rounded-2xl border p-4">
                 <input
                     type="checkbox"
-                    defaultChecked={selected.includes('TV')}
+                    checked={selected.includes('TV')}
                     onChange={handleCheckBoxClick}
                     name="TV"
                     className=""
@@ -90,7 +90,7 @@ function Perks({ selected, onChange }) {
             <label className="flex flex-1 cursor-pointer items-center gap-2 rounded-2xl border p-4">
                 <input
                     type="checkbox"
-                    defaultChecked={selected.includes('Radio')}
+                    checked={selected.includes('Radio')}
                     onChange={handleCheckBoxClick}
                     name="Radio"
                     className=""
@@ -115,7 +115,7 @@ function Perks({ selected, onChange }) {
             <label className="flex flex-1 cursor-pointer items-center gap-2 rounded-2xl border p-4">
                 <input
                     type="checkbox"
-                    defaultChecked={selected.includes('Pet')}
+                    checked={selected.includes('Pet')}
                     onChange={handleCheckBoxClick}
                     name="Pet"
                     className=""
@@ -127,7 +127,7 @@ function Perks({ selected, onChange }) {
             <label className="flex flex-1 cursor-pointer items-center gap-2 rounded-2xl border p-4">
                 <input
                     type="checkbox"
-                    defaultChecked={selected.includes('Private_entrance')}
+                    checked={selected.includes('Private_entrance')}
                     onChange={handleCheckBoxClick}
                     name="Private_entrance"
                     className=""

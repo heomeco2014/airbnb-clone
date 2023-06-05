@@ -43,9 +43,9 @@ function LoginPage() {
                         placeholder="password"
                         onChange={(ev) => setPassword(ev.target.value)}
                     />
-                    <button className="primary ">Login</button>
+                    <button className="primary btn">Login</button>
                     <div className="text-center">
-                        Don't have an account yet ?{' '}
+                        Don't have an account yet ?
                         <Link
                             to={'/register'}
                             className="font-semibold underline"

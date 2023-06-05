@@ -34,7 +34,7 @@ function ProfilePage() {
                     Logged in as {user.name} ({user.email})
                     <button
                         onClick={logout}
-                        className="primary mt-2 max-w-sm"
+                        className="primary btn mt-2 max-w-sm"
                     >
                         Logout
                     </button>

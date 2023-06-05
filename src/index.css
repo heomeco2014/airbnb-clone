@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 input[type='text'],
+input[type='tel'],
 input[type='time'],
 input[type='password'],
 input[type='number'],
@@ -21,7 +22,7 @@ button.primary {
 }
 
 /* Hover on button */
-button:hover {
+button.btn:hover {
     background-color: #e22349;
 }
 
@@ -30,4 +31,105 @@ p.text-infor {
 }
 input[type='time']::-webkit-datetime-edit-text {
     @apply p-4;
+}
+input[type='time'] {
+    width: 50%;
+}
+button.reset-btn {
+    all: unset;
+}
+
+@-webkit-keyframes SHOW-BOX {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes SHOW-BOX {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-o-keyframes SHOW-BOX {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes SHOW-BOX {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.show-box {
+    -webkit-animation: SHOW-BOX 2s ease;
+    -moz-animation: SHOW-BOX 2s ease;
+    -o-animation: SHOW-BOX 2s ease;
+    animation: SHOW-BOX 2s ease;
+}
+
+.animate {
+    transition: transform 0.35s ease-in-out;
+}
+
+.animate.grow {
+    transform: scale(1.5);
+}
+/* Removing arrow input */
+/* Chrome, Safari, Edge, Opera */
+input.number-remove_arrow::-webkit-outer-spin-button,
+input.number-remove_arrow::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input.number-remove_arrow[type='number'] {
+    -moz-appearance: textfield;
+}
+/* Date style */
+input.date::-webkit-datetime-edit,
+input.date::-webkit-datetime-edit-fields-wrapper,
+input.date::-webkit-datetime-edit-text,
+input.date::-webkit-datetime-edit-month-field,
+input.date::-webkit-datetime-edit-day-field,
+input.date::-webkit-datetime-edit-year-field,
+input.date::-webkit-inner-spin-button,
+input.date::-webkit-calendar-picker-indicator {
+    -webkit-appearance: none;
+}
+input.date::-webkit-datetime-edit-fields-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+input.date::-webkit-calendar-picker-indicator {
+    background: url('https://cdn4.iconfinder.com/data/icons/small-n-flat/24/calendar-512.png') no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    margin-left: 1.2rem;
+}
+input.date::-webkit-datetime-edit-text {
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 5px;
+    border: none;
+    outline: none;
+    text-align: center;
 }
